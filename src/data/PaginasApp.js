@@ -1,14 +1,14 @@
-import Titulo from '../components/Titulo';
+import Menu from '../components/Menu';
 import Ejercicio1 from '../components/Ejercicio1';
 import Ejercicio2 from '../components/Ejercicio2';
 import Ejercicio3 from '../components/Ejercicio3';
 
-export const Ejercicios = [
+export const Paginas = [
   {
     id: 1,
     path: '/',
-    title: 'Título',
-    component: Titulo,
+    title: 'Menu',
+    component: Menu,
   },
   {
     id: 2,

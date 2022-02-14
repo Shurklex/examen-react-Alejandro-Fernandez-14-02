@@ -1,14 +1,14 @@
 import React from 'react';
-import './style.css';
+import './index.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navegacion from './components/Navegacion';
-import { Ejercicios } from './data/Ejercicios';
+import { Paginas } from './data/PaginasApp';
 
 export default function App() {
   return (
     <Router>
       <Navegacion />
-      {Ejercicios.map((item) => {
+      {Paginas.map((item) => {
         return (
           <Route
             key={item.id}

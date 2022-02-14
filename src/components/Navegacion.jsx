@@ -4,12 +4,12 @@ import {
   Container,
   Offcanvas,
   Nav,
-  NavDropdown,
   Form,
   FormControl,
   Button,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Paginas } from '../data/PaginasApp';
 
 class Navegacion extends React.Component {
   constructor(props) {
@@ -19,9 +19,14 @@ class Navegacion extends React.Component {
   render() {
     return (
       <>
-        <Navbar bg="light" expand={false}>
+        <Navbar collapseOnSelect expand="lg" bg="light">
           <Container fluid>
-            <Navbar.Brand href="#">Examen React</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img
+                className="logo-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/100px-React.svg.png"
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"
@@ -34,8 +39,8 @@ class Navegacion extends React.Component {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  {Ejercicios.map((item) => {
+                <Nav>
+                  {Paginas.map((item) => {
                     return (
                       <Nav.Link as={Link} to={item.path}>
                         {item.title}
